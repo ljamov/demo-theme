@@ -445,6 +445,27 @@ h4,
 h5,
 h6 {
   clear: both;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 p {
@@ -580,32 +601,21 @@ a:hover, a:active {
 
 /* Forms
 --------------------------------------------- */
-button,
-input[type=button],
-input[type=reset],
-input[type=submit] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  line-height: 1;
-  padding: 0.6em 1em 0.4em;
+.btn {
+  min-width: 160px;
+  padding: 12px 15px;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
 }
-button:hover,
-input[type=button]:hover,
-input[type=reset]:hover,
-input[type=submit]:hover {
-  border-color: #ccc #bbb #aaa;
+.btn:hover {
+  background-color: #565b87;
 }
-button:active, button:focus,
-input[type=button]:active,
-input[type=button]:focus,
-input[type=reset]:active,
-input[type=reset]:focus,
-input[type=submit]:active,
-input[type=submit]:focus {
-  border-color: #aaa #bbb #bbb;
+.btn--orange {
+  background-color: #fc6a42;
+}
+.btn--blue {
+  background-color: #4466c9;
 }
 
 input[type=text],
