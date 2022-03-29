@@ -777,6 +777,16 @@ textarea {
   margin: 0 0 1.5em;
 }
 
+/* Custom Blocks
+--------------------------------------------- */
+.feature-box {
+  display: flex;
+}
+.feature-box__img {
+  max-width: 80px;
+  width: 100%;
+  margin-right: 20px;
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {
