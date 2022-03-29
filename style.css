@@ -446,7 +446,7 @@ h5,
 h6 {
   clear: both;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -461,7 +461,6 @@ h2 {
 
 h3 {
   font-size: 24px;
-  line-height: 1.5;
 }
 
 p {
