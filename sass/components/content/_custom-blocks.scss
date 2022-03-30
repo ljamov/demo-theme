@@ -1,3 +1,10 @@
+.hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
 .feature-box {
     display: flex;
 
@@ -8,4 +15,39 @@
     }
 
     &__content {}
+}
+
+.weather-widget {
+    padding-top: 25px;
+
+    &__img {
+        margin-bottom: 40px;
+    }
+
+    &__headline {
+        text-transform: uppercase;
+        color: $blue;
+        margin-bottom: 20px;
+    }
+
+    &__circle {
+        position: relative;
+        max-width: 60px;
+        width: 100%;
+        min-height: 60px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0,0,0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #c3cfe5;
+        margin-left: -10px;
+
+        &:first-child { margin-left: 0; }
+
+        &:last-child {
+            text-transform: capitalize;
+            letter-spacing: -1px;
+        }
+    }
 }

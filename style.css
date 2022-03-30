@@ -779,6 +779,12 @@ textarea {
 
 /* Custom Blocks
 --------------------------------------------- */
+.hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .feature-box {
   display: flex;
 }
@@ -787,6 +793,38 @@ textarea {
   width: 100%;
   margin-right: 20px;
 }
+.weather-widget {
+  padding-top: 25px;
+}
+.weather-widget__img {
+  margin-bottom: 40px;
+}
+.weather-widget__headline {
+  text-transform: uppercase;
+  color: #4466c9;
+  margin-bottom: 20px;
+}
+.weather-widget__circle {
+  position: relative;
+  max-width: 60px;
+  width: 100%;
+  min-height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c3cfe5;
+  margin-left: -10px;
+}
+.weather-widget__circle:first-child {
+  margin-left: 0;
+}
+.weather-widget__circle:last-child {
+  text-transform: capitalize;
+  letter-spacing: -1px;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {
@@ -994,4 +1032,8 @@ textarea {
 
 .txt--grey {
   color: #999;
+}
+
+.mr--15 {
+  margin-right: 15px;
 }
