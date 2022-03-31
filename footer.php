@@ -52,7 +52,7 @@
 					<p>&copy; 2016 All rights reserved. Weather App Theme by Gravpix</p>
 				</div>
 		</div>
-	</footer><!-- #colophon -->
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

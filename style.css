@@ -637,7 +637,7 @@ a:hover, a:active {
   font-weight: 700;
 }
 .btn:hover {
-  background-color: #353854;
+  background-color: #fc5629;
 }
 .btn--orange {
   background-color: #fc6a42;
@@ -811,6 +811,14 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 105px;
+  padding-bottom: 110px;
+}
+.hero-text-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  height: 100%;
 }
 
 .feature-box {
@@ -821,6 +829,10 @@ textarea {
   width: 100%;
   margin-right: 20px;
 }
+.feature-box a + a {
+  margin-left: 30px;
+}
+
 .weather-widget {
   padding-top: 25px;
 }
@@ -1062,6 +1074,6 @@ textarea {
   color: #999;
 }
 
-.mr--15 {
-  margin-right: 15px;
+.ml--15 {
+  margin-left: 15px;
 }

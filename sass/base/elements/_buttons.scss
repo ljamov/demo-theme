@@ -27,7 +27,7 @@
 	font-size: 18px;
 	font-weight: 700;
 
-	&:hover { background-color: $secondary; }
+	&:hover { background-color: darken($orange, 5%) }
 
 	&--orange { background-color: $orange; }
 	&--blue { background-color: $blue; }
