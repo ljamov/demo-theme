@@ -1,0 +1,126 @@
+@media (max-width: 1500px) {
+
+    .site-footer__top:before { max-width: calc(1200px - 30px); }
+
+}
+
+@media (max-width: 1200px) {
+
+    .site-footer__top:before { max-width: calc(100% - 30px); }
+    
+}
+
+@media (max-width: 991px) {
+
+	.logged-in .site-header { top: 30px; }
+
+	.site-header { 
+		padding: 20px 0; 
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	.menu-toggle { 
+		position: relative;
+		display: block; 
+		background: transparent;
+		min-width: 25px;
+		min-height: 25px;
+		padding: 0;
+		border: none;
+
+		&::before {
+			font-family: "Font Awesome 5 Free";
+			content: "\f0c9";
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 26px;
+			font-weight: 700;
+			color: $white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: all .3s ease-in-out;
+		}
+	}
+
+	.header-menu {
+
+		ul { 
+			position: absolute;
+			top: 65px;
+			left: 0;
+			background-color: #648CFF;
+			width: 100%;
+			min-height: calc(100vh - 65px);
+			height: 100vh;
+			display: flex !important;
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
+			flex-wrap: nowrap;
+			padding: 50px 15px; 
+			overflow: auto;
+			z-index: 9999;
+			transform: translateX(-100%);
+			transition: transform 200ms ease-in-out;
+		}
+
+		a { font-size: 28px; }
+
+	}
+
+	.header-menu.toggled {
+
+		ul {
+			transform: translateX(0);
+		}
+
+		.menu-toggle::before { content: "\f00d";}
+	}
+
+	.menu-social-top { display: none; }
+
+	.site-footer {
+
+		&__top { padding-bottom: 20px; }
+
+		&__bottom { text-align: center;}
+	}
+
+	.footer-menu { 
+		margin-bottom: 30px; 
+
+		ul { justify-content: center; }
+	}
+
+	.logo-widget img {
+		display: block;
+		margin: 0 auto 30px auto;
+	}
+
+	.menu-social ul { text-align: center; }
+
+	.section--padding {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+
+@media (max-width: 575px) {
+
+	.footer-menu {
+
+		ul { flex-direction: column; }
+
+		li { 
+			margin-bottom: 15px; 
+
+			&:last-child { margin-bottom: 0; }
+		}
+
+		a { padding: 0; }
+	}
+}

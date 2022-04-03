@@ -1,30 +1,33 @@
-.footer {
-    background-color: #353854;
-    color: #565b87;
+.site-footer {
+	
+	background-color: $secondary;
 
-    &__top {
-        position: relative;
-        min-height: 220px;
-        display: flex;
-        align-items: center;
+	&__top {
+		position: relative;
+		padding-bottom: 60px;
 
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            max-width: 1600px;
-            width: 100%;
-            height: 1px;
-            background-color: #434769;
-        }
-    }
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			max-width: calc(100% - 300px);
+			width: 100%;
+			height: 1px;
+			margin: auto;
+			background-color: $purple-dark;
+		}
+	
+	}
 
-    &__bottom {
-        min-height: 145px;
-        padding-top: 50px;
-        text-align: right;
-    }
+	&__bottom {
+		text-align: right;
+		color: $purple-light;
+		padding-top: 45px;
+		
+		p:last-child { margin-bottom: 0; }
+	}
 }
+
+.logo-widget .wp-block-image { margin-bottom: 0; }

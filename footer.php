@@ -17,13 +17,11 @@
 				<div class="row align-items-center">
 
 					<div class="col-lg-3">
-						<div class="footer-logo">
-							<?php if ( is_active_sidebar( 'footer_one_widget' ) ) : ?>
+						<?php if ( is_active_sidebar( 'footer_logo_widget' ) ) : ?>
 							
-								<?php dynamic_sidebar( 'footer_one_widget' ); ?>
+							<?php dynamic_sidebar( 'footer_logo_widget' ); ?>
 							
-							<?php endif; ?>
-						</div>
+						<?php endif; ?>
 					</div>
 
 					<div class="col-lg-6">

@@ -20,3 +20,93 @@ a {
 		outline: 0;
 	}
 }
+
+.primary-menu {
+	
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	a { 
+		text-decoration: none;
+		padding: 30px;
+		transition: all .3s ease-in-out;
+
+		&.active,
+		&:hover,
+		&:focus { color: $white; }
+	}
+
+	.current-menu-item a { color: $white; }
+
+	&--white {
+		a { color: #e1e1e1;  }
+	}
+
+	&--silver {
+		a { color: #b5b5c8;  }
+	}
+}
+
+.menu-social {
+
+	margin-right: -15px;
+
+	ul { 
+		list-style-image: none;
+		list-style-type: none;
+		list-style: none; 
+		text-align: right;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		position: relative;
+		display: inline-block;
+	}
+
+	a {
+		display: block;
+		line-height: 1;
+		padding: 15px;
+		transition: all .3s ease-in-out;
+
+		&[href*="facebook.com"]::before { content: "\f39e"; }
+		&[href*="instagram.com"]::before { content: "\f16d"; }
+		&[href*="twitter.com"]::before { content: "\f099"; }
+
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {text-decoration: none;}
+
+		&:before {
+			font-family: "Font Awesome 5 Brands"; 
+			content: "\f2b4";
+			display: inline-block;
+			font-size: 28px;
+			vertical-align: bottom;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+
+	&--silver {
+		a { color: #b5b5c8; }
+
+		li:hover > a { color: #fff; } 
+	}
+
+	&--white {
+		a { color: #fff; }
+
+		li:hover > a { color: #e1e1e1; } 
+	}
+
+}

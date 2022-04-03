@@ -2,3 +2,19 @@ body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 }
 
+.site-header { 
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: $blue; 
+}
+
+.site-header .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+body .main-navigation { width: auto; }
+

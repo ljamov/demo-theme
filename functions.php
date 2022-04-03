@@ -187,8 +187,12 @@ function demo_theme_widgets_init() {
 function footer_logo_widget() {
 	register_sidebar( 
 		array(
-			'name'          => esc_html__('Footer Logo Widget', 'demo-theme'),
+			'name'          => esc_html__( 'Footer Logo Widget', 'demo-theme' ),
 			'id'            => 'footer_logo_widget',
+			'before_widget' => '<div class="logo-widget">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h6 class="text-uppercase fw-bold mb-4">',
+			'after_title'   => '</h6>',
 		) 
 	);
 }
@@ -196,8 +200,12 @@ function footer_logo_widget() {
 function copyright_widget() {
 	register_sidebar( 
 		array(
-			'name'          => esc_html__('Footer Copyright Widget', 'demo-theme'),
+			'name'          => esc_html__( 'Footer Copyright Widget', 'demo-theme' ),
 			'id'            => 'footer_copyright_widget',
+			'before_widget' => '<div class="copyright-widget">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h6 class="text-uppercase fw-bold mb-4">',
+			'after_title'   => '</h6>',
 		) 
 	);
 }
@@ -212,6 +220,8 @@ add_action( 'widgets_init', 'copyright_widget' );
  */
 function demo_theme_scripts() {
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css', array(), _S_VERSION );
+
+	wp_enqueue_style( 'demo-theme-fontawesome', get_template_directory_uri() . '/css/fontawesome.min.css', array(), _S_VERSION );
 
 	wp_enqueue_style( 'demo-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'demo-theme-style', 'rtl', 'replace' );
