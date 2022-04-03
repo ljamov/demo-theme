@@ -183,7 +183,29 @@ function demo_theme_widgets_init() {
 		)
 	);
 }
+
+function footer_one_widget() {
+	register_sidebar( 
+		array(
+			'name'          => esc_html__('Footer Logo Widget', 'demo-theme'),
+			'id'            => 'footer_logo_widget',
+		) 
+	);
+}
+
+function copyright_widget() {
+	register_sidebar( 
+		array(
+			'name'          => esc_html__('Footer Copyright Widget', 'demo-theme'),
+			'id'            => 'footer_copyright_widget',
+		) 
+	);
+}
+
 add_action( 'widgets_init', 'demo_theme_widgets_init' );
+add_action( 'widgets_init', 'footer_logo_widget' );
+add_action( 'widgets_init', 'copyright_widget' );
+
 
 /**
  * Enqueue scripts and styles.
