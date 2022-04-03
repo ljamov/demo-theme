@@ -11,46 +11,50 @@
 
 ?>
 
-	<footer id="colophon" class="footer">
-		<div class="container">
-			<div class="footer__top">
-				<div>
-					<img src="">
-				</div>
+	<footer id="colophon" class="site-footer section--padding">
+		<div class="site-footer__top">
+			<div class="container">
+				<div class="row align-items-center">
 
-				<div>
-					<nav>
-						<ul class="nav nav--secondary">
-							<li>
-								<a href="#">Home</a>
-							</li>
-							<li>
-								<a href="#">Features</a>
-							</li>
-							<li>
-								<a href="#">Reviews</a>
-							</li>
-							<li>
-								<a href="#">Download</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
+					<div class="col-lg-3">
+						<div class="footer-logo">
+							<?php if ( is_active_sidebar( 'footer_one_widget' ) ) : ?>
+							
+								<?php dynamic_sidebar( 'footer_one_widget' ); ?>
+							
+							<?php endif; ?>
+						</div>
+					</div>
 
-				<div>
-					<nav>
-						<ul class="social-icons">
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-						</ul>
-					</nav>
+					<div class="col-lg-6">
+						<nav class="primary-menu primary-menu--silver footer-menu">
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'footer-menu',
+										'menu_id'        => 'primary-menu',
+									)
+								);
+							?>
+						</nav>
+					</div>
+
+					<div class="col-lg-3">
+						<?php demo_theme_social_bottom_menu(); ?>
+					</div>
+
 				</div>
-			</div>
-				
-				<div class="footer__bottom">
-					<p>&copy; 2016 All rights reserved. Weather App Theme by Gravpix</p>
-				</div>
+			</div>	
+		</div>
+		
+		<div class="site-footer__bottom">
+			<div class="container">
+				<?php if ( is_active_sidebar( 'footer_copyright_widget' ) ) : ?>
+	
+					<?php dynamic_sidebar( 'footer_copyright_widget' ); ?>
+
+				<?php endif; ?>
+			</div>				
 		</div>
 	</footer>
 </div><!-- #page -->
