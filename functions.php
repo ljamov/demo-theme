@@ -184,7 +184,7 @@ function demo_theme_widgets_init() {
 	);
 }
 
-function footer_one_widget() {
+function footer_logo_widget() {
 	register_sidebar( 
 		array(
 			'name'          => esc_html__('Footer Logo Widget', 'demo-theme'),
@@ -212,7 +212,7 @@ add_action( 'widgets_init', 'copyright_widget' );
  */
 function demo_theme_scripts() {
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css', array(), _S_VERSION );
-	
+
 	wp_enqueue_style( 'demo-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'demo-theme-style', 'rtl', 'replace' );
 
