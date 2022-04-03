@@ -46,12 +46,63 @@ function demo_theme_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	//Register Navigation
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'demo-theme' ),
+			'header-menu' => esc_html__( 'Primary', 'demo-theme' ),
+			'footer-menu' => esc_html__( 'Footer Menu', 'demo-theme' ),
 		)
 	);
+
+	//Register Social media menu
+	register_nav_menus(
+		array(
+			'social-top'  => esc_html__( 'Social Top Menu', 'demo-theme' ),
+			'social-bottom'  => esc_html__( 'Social Bottom Menu', 'demo-theme' ),
+		)
+	);
+
+	// Social Top Menu
+	function demo_theme_social_top_menu() {
+		if ( has_nav_menu( 'social-top' ) ) {
+			
+			$args = array(
+				'theme_location'  => 'social-top',
+				'container'       => 'nav',
+				'container_id'    => 'menu-social',
+				'container_class' => 'menu-social menu-social--white menu-social-top',
+				'menu_id'         => 'menu-social-items',
+				'menu_class'      => 'menu-items',
+				'depth'           => 1,
+				'link_before'     => '<span class="screen-reader-text">',
+				'link_after'      => '</span>',
+				'fallback_cb'     => '',
+			);
+
+			wp_nav_menu($args);	
+		}
+	}
+
+	// Social Bottom Menu
+	function demo_theme_social_bottom_menu() {
+		if ( has_nav_menu( 'social-bottom' ) ) {
+			
+			$args = array(
+				'theme_location'  => 'social-bottom',
+				'container'       => 'nav',
+				'container_id'    => 'menu-social',
+				'container_class' => 'menu-social menu-social--silver',
+				'menu_id'         => 'menu-social-items',
+				'menu_class'      => 'menu-items',
+				'depth'           => 1,
+				'link_before'     => '<span class="screen-reader-text">',
+				'link_after'      => '</span>',
+				'fallback_cb'     => '',
+			);
+
+			wp_nav_menu($args);	
+		}
+	}
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
