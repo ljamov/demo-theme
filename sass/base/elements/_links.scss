@@ -78,9 +78,18 @@ a {
 		padding: 15px;
 		transition: all .3s ease-in-out;
 
-		&[href*="facebook.com"]::before { content: "\f39e"; }
-		&[href*="instagram.com"]::before { content: "\f16d"; }
-		&[href*="twitter.com"]::before { content: "\f099"; }
+		&[href*="facebook.com"]::before { 
+			-webkit-mask-image: url("images/facebook-icon.svg");
+    		mask-image: url("images/facebook-icon.svg");
+		}
+		&[href*="instagram.com"]::before { 
+			-webkit-mask-image: url("images/instagram-icon.svg");
+    		mask-image: url("images/instagram-icon.svg");
+		}
+		&[href*="twitter.com"]::before { 
+			-webkit-mask-image: url("images/twitter-icon.svg");
+    		mask-image: url("images/twitter-icon.svg");
+		}
 
 		&:link,
 		&:visited,
@@ -88,25 +97,28 @@ a {
 		&:active {text-decoration: none;}
 
 		&:before {
-			font-family: "Font Awesome 5 Brands"; 
-			content: "\f2b4";
-			display: inline-block;
-			font-size: 28px;
-			vertical-align: bottom;
-			-webkit-font-smoothing: antialiased;
+			content: "";
+			display: flex;
+			min-width: 25px;
+			height: 25px;
+			background-repeat: no-repeat;
+			background-position: center;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			transition: all .3s ease-in-out;
 		}
 	}
 
 	&--silver {
-		a { color: #b5b5c8; }
+		a::before { background-color: #b5b5c8; }
 
-		li:hover > a { color: #fff; } 
+		li:hover > a::before { background-color: $white; } 
 	}
 
 	&--white {
-		a { color: #fff; }
+		a::before { background-color: $white; } 
 
-		li:hover > a { color: #e1e1e1; } 
+		li:hover > a::before { background-color: #e1e1e1; } 
 	}
 
 }
