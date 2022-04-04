@@ -2,11 +2,24 @@ body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 }
 
+body .page-content, 
+body .entry-content, 
+body .entry-summary 
+body .post, 
+body .page {
+	margin: 0;
+}
+
 .site-header { 
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: $blue; 
+	background-color: transparent; 
+}
+
+.site-header.sticky {
+	background-color: $primary;
+	box-shadow: 0 15px 30px rgba($black, 0.1);
 }
 
 .site-header .container {

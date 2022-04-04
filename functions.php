@@ -221,10 +221,10 @@ add_action( 'widgets_init', 'copyright_widget' );
 function demo_theme_scripts() {
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css', array(), _S_VERSION );
 
-	wp_enqueue_style( 'demo-theme-fontawesome', get_template_directory_uri() . '/css/fontawesome.min.css', array(), _S_VERSION );
-
 	wp_enqueue_style( 'demo-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'demo-theme-style', 'rtl', 'replace' );
+
+	wp_enqueue_script( 'demo-theme-sticky', get_template_directory_uri() . '/js/sticky-header.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'demo-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
