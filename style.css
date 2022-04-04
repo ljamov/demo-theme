@@ -1243,6 +1243,10 @@ textarea {
   .container {
     max-width: 100% !important;
   }
+
+  .hero-text-img {
+    text-align: right;
+  }
 }
 @media (max-width: 991px) {
   .logged-in .site-header {
