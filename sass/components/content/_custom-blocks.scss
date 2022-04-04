@@ -14,6 +14,8 @@
             max-width: 500px;
             height: 100%;
         }
+
+        &__btns a+a { margin-left: 15px; }
     }
 }
 
@@ -27,7 +29,7 @@
         margin-right: 20px;
     }
 
-    &__content {}
+    &__content p { margin-bottom: 0; }
 
     a+a { margin-left: 30px; }
 }
@@ -35,13 +37,15 @@
 .weather-widget {
     padding-top: 25px;
 
+    &__side-img { padding-left: 20px; }
+
     &__img {
         margin-bottom: 40px;
     }
 
     &__headline {
         text-transform: uppercase;
-        color: $blue;
+        color: $primary;
         margin-bottom: 20px;
     }
 
@@ -55,14 +59,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #c3cfe5;
-        margin-left: -10px;
+        background-color: $white;
+        color: $blue-light;
+        margin-left: -3px;
 
-        &:first-child { margin-left: 0; }
+        &:first-child { 
+            margin-left: 0; 
+            z-index: 3;
+        }
+
+        &:nth-child(2) { z-index: 2; }
 
         &:last-child {
             text-transform: capitalize;
             letter-spacing: -1px;
+            z-index: 1;
         }
     }
 }
